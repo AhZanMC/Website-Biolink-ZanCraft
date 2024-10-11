@@ -1,0 +1,359 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: "Quicksand", sans-serif;
+}
+
+/*==================================================================================================*/
+/* Custom scroll bar */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #333333;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ffffff;
+}
+
+::selection {
+	background: rgb(0, 123, 255, 0.3);
+}
+
+/*==================================================================================================*/
+/* Container */
+body {
+	background: url("../assets/bg.jpeg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*==================================================================================================*/
+/* Jam Digital :v */
+.jam {
+	text-align: center;
+}
+
+.jam>b {
+	font-size: 16px;
+	color: white;
+	padding: 10px;
+}
+
+/*==================================================================================================*/
+/* Header (Beta) = Share Button */
+header {
+	width: 80%;
+	max-width: 788px;
+	display: flex;
+	justify-content: flex-end;
+	padding: 0px;
+	margin-top: 15px;
+	margin-right: -450px;
+}
+
+.share-button {
+	width: 40px;
+	height: 40px;
+}
+
+.share-button i {
+	margin-left: 12px;
+	margin-top: 10px;
+	color: #ffffff;
+	transition: cubic-bezier(.07, 1.41, .82, 1.41) 1.5s;
+}
+
+.share-button i:hover {
+	margin-left: 12px;
+	margin-top: 10px;
+	color: rgb(0, 221, 255);
+}
+
+@media only screen and (min-width: 200px) and (max-width: 800px) {
+	header {
+		margin-right: -10px;
+	}
+}
+
+/*==================================================================================================*/
+/* Profile */
+.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 25px;
+	padding: 20px;
+}
+
+.profile>img {
+	width: 150px;
+	height: 150px;
+	border: 3px solid #ffffff;
+	border-radius: 100%;
+	transition: box-shadow cubic-bezier(.07, 1.41, .82, 1.41) 1.5s;
+}
+
+.profile>img:hover {
+	box-shadow: 0 0 5px rgb(66, 245, 236),
+		0 0 10px rgb(66, 245, 236),
+		0 0 25px rgb(66, 245, 236),
+		0 0 30px rgb(66, 245, 236);
+}
+
+.profile>b {
+	font-size: 1.8em;
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: white;
+	text-transform: capitalize;
+	text-align: center;
+	padding: 10px;
+}
+
+.profile>p {
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: white;
+	text-transform: capitalize;
+	text-align: center;
+	padding: 12px;
+}
+
+.profile>a {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: white;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+/*==================================================================================================*/
+/* Link Button */
+.link {
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.link>b {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.link>a {
+	text-decoration: none;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	border: 3px solid #222;
+	border-radius: 17px;
+	background-color: #031cfc;
+	margin: 5px 10px;
+	text-transform: capitalize;
+	transition: cubic-bezier(.07, 1.41, .82, 1.41) 1.5s;
+	cursor: pointer;
+}
+
+.link>a:hover {
+	background: rgb(255, 230, 0);
+	border: 3px solid #ffffff;
+	box-shadow: 0 0 5px rgb(255, 230, 0),
+		0 0 10px rgb(255, 230, 0),
+		0 0 25px rgb(255, 230, 0),
+		0 0 30px rgb(255, 230, 0);
+	border-radius: 30px;
+	transition: .5s;
+	transform: scale(1.050);
+	cursor: pointer;
+}
+
+.tile-share-button {
+	margin: 8px;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.tile-share-button svg {
+	margin-left: 12px;
+	margin-top: 10px;
+}
+
+.icon {
+	margin: 4px 8px;
+	width: 44px;
+	height: 44px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 800px) {
+	.link {
+		width: 90%;
+	}
+}
+/*==================================================================================================*/
+/* Button Menyamping */
+.button-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: normal;
+	align-items: normal;
+	align-content: normal;
+}
+
+.button-items {
+	display: block;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+	align-self: auto;
+	order: 0;
+	padding: 10px;
+	color: #ffffff;
+	transition: cubic-bezier(.07, 1.41, .82, 1.41) 1.5s;
+}
+
+.button-items:hover {
+	color: rgb(0, 221, 255);
+}
+
+/*==================================================================================================*/
+/* Overlay Styling */
+.overlay {
+    position: fixed; /* Tetap di layar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Latar belakang gelap dengan transparansi */
+    visibility: hidden; /* Sembunyikan overlay */
+    opacity: 0; /* Mulai dengan opacity 0 */
+    transition: opacity 0.5s ease; /* Transisi untuk opacity */
+    z-index: 999; /* Pastikan overlay di atas elemen lainnya */
+}
+
+/* Menampilkan overlay */
+.overlay.show {
+    visibility: visible; /* Ubah menjadi visible */
+    opacity: 1; /* Tampilkan overlay */
+	transition: opacity 0.5s ease; /* Transisi untuk opacity */
+}
+
+/*==================================================================================================*/
+/* Modal Styling */
+.modal {
+    width: 90%; /* Lebar modal 90% dari viewport */
+    max-width: 500px; /* Lebar maksimum 500px */
+    background: #333; /* Background gelap */
+    color: white; /* Teks berwarna putih */
+    border: 1px solid #555; /* Border yang lebih gelap */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transisi animasi */
+    box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.5); /* Bayangan */
+    position: fixed; /* Tetap di layar */
+    top: 50%; /* Posisi vertikal di tengah */
+    left: 50%; /* Posisi horizontal di tengah */
+    transform: translate(-50%, -60px); /* Mulai di atas */
+    opacity: 0; /* Mulai dengan opacity 0 */
+    visibility: hidden; /* Sembunyikan modal */
+    z-index: 1000; /* Pastikan modal di atas elemen lainnya */
+}
+
+/* Menampilkan modal */
+.modal.show {
+    transform: translate(-50%, -50%); /* Pindahkan modal ke tengah saat muncul */
+    opacity: 1; /* Tampilkan modal */
+    visibility: visible; /* Ubah menjadi visible */
+}
+
+/* Menyembunyikan modal */
+.modal.hide {
+    transform: translate(-50%, -60px); /* Pindahkan ke atas saat ditutup */
+    opacity: 0; /* Sembunyikan modal */
+    visibility: hidden; /* Ubah menjadi hidden */
+}
+
+/* Styling untuk judul */
+.modal h2 {
+    border-bottom: 1px solid #555; /* Border gelap */
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Konten modal */
+.modal .content {
+    padding: 1rem;
+}
+
+/* Aksi di bagian bawah modal */
+.modal .actions {
+    border-top: 1px solid #555; /* Border gelap */
+    background: #444; /* Latar belakang sedikit lebih terang */
+    padding: 0.5rem 1rem;
+}
+
+/* Tombol close */
+.modal .actions .toggle-button {
+    border: 0;
+    background: #78f89f; /* Warna hijau */
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    line-height: 1;
+    cursor: pointer; /* Pointer saat hover */
+}
+
+/*==================================================================================================*/
+/* Video Embed Link */
+iframe {
+	width: 100%;
+	height: 512px;
+	margin-bottom: 20px;
+}
+
+/* Media queries untuk responsifitas */
+@media screen and (max-width: 1024px) {
+	iframe {
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	iframe {
+		height: 200px;
+		margin-bottom: 10px; /* Mengurangi margin untuk perangkat mobile */
+	}
+}
+
+/*==================================================================================================*/
+/* Footer */
+.footer {
+	text-align: center;
+}
+
+.footer>b {
+	color: white;
+	font-size: 15px;
+}
